@@ -4,6 +4,43 @@ title: "C++11 -- auto"
 date: 2013-04-15
 comments: true
 categories: blog
-tags: [C++] 
+tags: [C++, C++11] 
 ---
-Learning...
+<em>学习中......</em>
+
+<p>关键字auto的定义在C++11标准中做了重新定义，并且老的定义不再支持。</p>
+<b>老定义</b>：用于定义本地变量。在新的标准中如果定义这样的变量<br/>
+<code>auto int var</code><br/>
+将会引起一个编译错误。<br/>
+<b>新定义</b>：允许编译器来决定一个变量的类型，而开发人员不再需要显式的指定变量类型，例如：<br/>
+<code>
+int num = 7;//显式指定变量num的类型<br/>
+auto num = 7;//有编译器来决定num的类型，由于7是一个正型，所以num会被自定定义为int类型<br/>
+</code>
+
+auto的行语法可以给开发人员带来极大的方便，主要有如下优点:
+<ul>
+<li><p>不再需要书写冗长的类型名字，特别是在使用模板的时候。例如:<br/>
+<code>
+template&lt;typename T>
+void test(const vector&lt;T>& v){<br/>
+for(auto p = v.begin(); p!= v.end(); ++p){<br/>
+cout &lt;&lt; *p &lt;&lt; "\n";
+	<br/>}	
+<br/>}
+</code>
+</p></li> 
+<li><p>对于变量类型依赖于模板参数的情况，有些时候很难明确写出具体类型，那么使用auto就会很方便。例如:<br/>
+<code>
+template&lt;typename T>
+void test(const vector&lt;T>& v, const vector&lt;T>& u){<br/>
+...<br/>
+auto tmp = v[i]*u[i];<br/>
+...
+<br/>}
+</code>
+</p></li>
+</ul>
+---
+引用<br/>
+1. http://www.stroustrup.com/C++11FAQ.html#auto
