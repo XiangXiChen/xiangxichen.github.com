@@ -1,2 +1,9 @@
-#C++11 -- auto
+---
+layout: post
+title: "C++11 -- auto"
+date: 2013-04-15
+comments: true
+categories: blog
+tags: [C++] 
+---
 Learning...
