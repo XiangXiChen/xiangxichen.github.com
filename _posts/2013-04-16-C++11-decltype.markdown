@@ -6,8 +6,15 @@ comments: true
 categories: blog
 tags: [C++, C++11] 
 ---
-<em>学习中......</em>
-
+**学习中......**<br/><br/>
+**WHAT**<br/>
+<br/>
+**HOW**<br/>
+<br/>
+**IDIOMS**<br/>
+<br/>
+**PROBLEMS**<br/>
+<br/>
 ---
 引用<br/>
 1. http://www.stroustrup.com/C++11FAQ.html#decltype<br/>
