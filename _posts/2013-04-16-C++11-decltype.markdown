@@ -8,7 +8,23 @@ tags: [C++, C++11]
 ---
 **学习中......**<br/><br/>
 **WHAT**<br/>
-<br/>
+decltype用于缀取一个表达式的类型，并且通过decltype获取到的类型可以用于声明变量。decltype的语法如下：<br/>
+<code>
+unary-expression<br/>
+...<br/>
+decltype(unary-expression)<br/>
+decltype(type-id)<br/>
+typedef decltype(unary-expression) temp<br/>
+...
+</code>
+<br/>下面是从文档[Decltype and auto](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)中摘取出来的,关于decltype更加详细的描述:<br/>
+<code>
+1. If e is a name of a variable in namespace or local scope, a static member variable, or a formal parameter of a function, decltype(e) is the declared type for that variable or formal parameter. Particularly, decltype(e) results in a reference type only if the variable or formal parameter is declared as a reference type.<br/>
+2. If e is an invocation of a function or operator, either user-defined or built-in, decltype(e) is the declared return type of that function. The standard text does not list the prototypes of all built-in operators. For the operators and expressions whose prototypes are not listed, the declared type is a reference type whenever the return type of the operator is specified to be an lvalue.<br/>
+3.decltype does not evaluate its argument expression.<br/>
+4. The decltype taking a type parameter is an identity function: decltype(T) is equal to T for any type expression T.<br/>
+</code>
+
 **HOW**<br/>
 <br/>
 **IDIOMS**<br/>
@@ -17,6 +33,6 @@ tags: [C++, C++11]
 <br/>
 ---
 引用<br/>
-1. http://www.stroustrup.com/C++11FAQ.html#decltype<br/>
-2. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf<br/>
-3. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2343.pdf<br/>
+1. [http://www.stroustrup.com/C++11FAQ.html#decltype](http://www.stroustrup.com/C++11FAQ.html#decltype)<br/>
+2. [http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)<br/>
+3. [http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2343.pdf](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2343.pdf)<br/>

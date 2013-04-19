@@ -11,10 +11,11 @@ tags: [C++, C++11]
 auto关键字在C++11之前就已经存在, 但是在C++11标准中给auto赋予了新的定义，并且抛弃了老的定义。<br/>
 C++11前的定义：auto可以用于定义局部变量。
 <br/>
-C++11的定义：auto用于描述一个变量类型，该类型可以通过初始化表达式来进行推导，例如: auto x = 1, 编译器就可以通过x的初始值1来推导出x是一个int类型。
+C++11的定义：auto用于描述一个变量类型，该类型可以通过初始化表达式来进行推导，例如:<code> auto x = 1</code>, 编译器就可以通过x的初始值1来推导出x是一个int类型。
 <br/><br/>
 **HOW**<br/>
 下面是关于auto的使用方法。<br/>
+<code>
 float& bar();<br/>
 auto y1 = bar();//y1是float类型<br/>
 const auto& y2 = bar();//y2是const float&类型<br/>
@@ -24,19 +25,17 @@ auto x1 = foo(); //x1 是int类型<br/>
 const auto& x2 = foo(); //x2是const int&类型<br/>
 auto& x3 = foo();//x3是int&类型,但是该语句是错误的,因为一个临时变量不能绑定到一个引用类型,foo()的返回值产生一个临时变量,然后在复制给x3.
 <br/>
-
 auto ptr() -> int (*)[5];//相当于int (*ptr())[5];<br/>
-
 template&lt;typename T> void print(const vector&lt;T>& v){<br/>
 for(auto p = v.begin(); p!= v.end(); ++p){<br/>
 cout &lt;&lt; *p &lt;&lt; "\n";<br/>}<br/>
-
 template&lt;typename T>
 void test(const vector&lt;T>& v, const vector&lt;T>& u){<br/>
 ...<br/>
 auto tmp = v[i]*u[i];<br/>
 ...
 <br/>}
+</code>
 
 **IDIOMS**<br/>
 NONE<br/>
@@ -55,6 +54,6 @@ b.f();//b还有多态的特性吗？<br/>
 
 ---
 引用<br/>
-1. http://www.stroustrup.com/C++11FAQ.html#auto<br/>
-2. http://www.cnblogs.com/soaliap/archive/2013/01/08/2851538.html<br/>
-3. http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf<br/>
+1.[http://www.stroustrup.com/C++11FAQ.html#auto](http://www.stroustrup.com/C++11FAQ.html#auto)<br/>
+2. [http://www.cnblogs.com/soaliap/archive/2013/01/08/2851538.html](http://www.cnblogs.com/soaliap/archive/2013/01/08/2851538.html)<br/>
+3. [http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)<br/>
