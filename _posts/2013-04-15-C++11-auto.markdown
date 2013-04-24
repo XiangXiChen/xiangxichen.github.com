@@ -59,8 +59,8 @@ auto y1 = bar();//y1是float类型还是float&类型<br/><br/>
 </code>
 </li>
 </ul>
-
 ---
+
 引用<br/>
 1.[http://www.stroustrup.com/C++11FAQ.html#auto](http://www.stroustrup.com/C++11FAQ.html#auto)<br/>
 2. [http://www.cnblogs.com/soaliap/archive/2013/01/08/2851538.html](http://www.cnblogs.com/soaliap/archive/2013/01/08/2851538.html)<br/>

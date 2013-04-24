@@ -36,7 +36,9 @@ auto add(int x, int y) ->decltype(x + y);//很有意思的用法<br/><br/>
 <br/>
 **PROBLEMS**<br/>
 <br/>
+
 ---
+
 引用<br/>
 1. [http://www.stroustrup.com/C++11FAQ.html#decltype](http://www.stroustrup.com/C++11FAQ.html#decltype)<br/>
 2. [http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)<br/>
