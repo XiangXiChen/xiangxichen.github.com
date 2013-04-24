@@ -25,6 +25,7 @@ auto x1 = foo(); //x1 是int类型<br/><br/>
 const auto& x2 = foo(); //x2是const int&类型<br/><br/>
 auto& x3 = foo();//x3是int&类型,但是该语句是错误的,因为一个临时变量不能绑定到一个引用类型,foo()的返回值产生一个临时变量,然后在复制给x3.
 <br/><br/>
+auto add(int a, int b) -> int;//相当于函数int add(int a, int b)<br/><br/>
 auto ptr() -> int (*)[5];//相当于int (*ptr())[5];<br/><br/>
 template&lt;typename T> void print(const vector&lt;T>& v){<br/>
 for(auto p = v.begin(); p!= v.end(); ++p){<br/>
@@ -43,11 +44,18 @@ NONE<br/>
 **PROBLEMS**
 <ul>
 <li>
-1. 使用auto声明的变量，很难指出该变量是不是引用类型。例如：<br>
+1. 使用auto声明的变量，很难指出该变量是不是引用类型。例如：<br/>
 <code>
 //...<br/>
 auto b = d;//该赋值是引用的，还是通过切割一个对象赋值<br/>
 b.f();//b还有多态的特性吗？<br/>
+</code>
+</li>
+<li>
+2. 某些情况的函数返回值类型不是很直观。例如(上面代码中也有)：<br/>
+<code>
+float& bar();<br/><br/>
+auto y1 = bar();//y1是float类型还是float&类型<br/><br/>
 </code>
 </li>
 </ul>

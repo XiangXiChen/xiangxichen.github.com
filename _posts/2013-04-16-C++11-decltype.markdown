@@ -17,7 +17,7 @@ decltype(type-id)<br/>
 typedef decltype(unary-expression) temp<br/>
 ...
 </code>
-<br/>下面是从文档[Decltype and auto](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)中摘取出来的,关于decltype更加详细的描述:<br/><br/>
+<br/><br/>下面是从文档[Decltype and auto](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1478.pdf)中摘取出来的,关于decltype更加详细的描述:<br/>
 <code>
 1. If e is a name of a variable in namespace or local scope, a static member variable, or a formal parameter of a function, decltype(e) is the declared type for that variable or formal parameter. Particularly, decltype(e) results in a reference type only if the variable or formal parameter is declared as a reference type.<br/><br/>
 2. If e is an invocation of a function or operator, either user-defined or built-in, decltype(e) is the declared return type of that function. The standard text does not list the prototypes of all built-in operators. For the operators and expressions whose prototypes are not listed, the declared type is a reference type whenever the return type of the operator is specified to be an lvalue.<br/><br/>
@@ -26,6 +26,11 @@ typedef decltype(unary-expression) temp<br/>
 </code>
 
 **HOW**<br/>
+<code>
+auto x = 4;//x是类型int<br/>
+decltype(x) y = x;//相当于auto y = x;或者int y = x;<br/><br/>
+auto add(int x, int y) ->decltype(x + y);//很有意思的用法<br/><br/>
+</code>
 <br/>
 **IDIOMS**<br/>
 <br/>

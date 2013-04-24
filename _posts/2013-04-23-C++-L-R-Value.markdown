@@ -1,0 +1,19 @@
+---
+layout: post
+title: "C++ -- L-R Value"
+date: 2013-04-23
+comments: true
+categories: blog
+tags: [C++, C++11] 
+---
+**学习中......**<br/><br/>
+**WHAT**<br/>
+**HOW**<br/>
+**IDIOMS**<br/>
+**PROBLEMS**<br/>
+<br/>
+---
+引用<br/>
+1. [http://msdn.microsoft.com/en-us/library/bkbs2cds.aspx](http://msdn.microsoft.com/en-us/library/bkbs2cds.aspx)<br/>
+2. [http://www.cnblogs.com/dejavu/archive/2012/09/02/2667640.html](http://www.cnblogs.com/dejavu/archive/2012/09/02/2667640.html)<br/>
+3. [http://www.embedded.com/electronics-blogs/programming-pointers/4023341/Lvalues-and-Rvalues](http://www.embedded.com/electronics-blogs/programming-pointers/4023341/Lvalues-and-Rvalues)<br/>
