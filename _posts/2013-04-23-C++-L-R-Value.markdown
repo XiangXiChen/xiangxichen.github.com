@@ -8,6 +8,9 @@ tags: [C++, C++11]
 ---
 **学习中......**<br/><br/>
 **WHAT**<br/>
+直观的定义：<br/>
+L-Value: 在=号表达式左边的变量。<br/>
+R-Value: 在=号表达式右边的变量。<br/>
 **HOW**<br/>
 **IDIOMS**<br/>
 **PROBLEMS**<br/>
