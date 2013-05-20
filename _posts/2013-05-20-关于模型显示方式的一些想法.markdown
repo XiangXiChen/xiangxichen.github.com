@@ -6,7 +6,9 @@ comments: true
 categories: blog
 tags: [C++] 
 ---
-TBT
+* 桌面应用
+* Web应用
+* Cloud应用
 <br/>
 
 ---
