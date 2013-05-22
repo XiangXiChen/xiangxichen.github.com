@@ -7,6 +7,8 @@ categories: blog
 tags: [C++] 
 ---
 * 桌面应用
+比较有名的模型软件有Autodesk Navisworks，该款软件能够高效的浏览大数据模型，并且也提供了BIM相关的一些功能，在桌面应用的领域可以算是一个顶级的软件, 当然价格也相当昂贵了。
+
 * Web应用
 * Cloud应用
 <br/>
